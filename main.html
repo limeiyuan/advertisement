@@ -1,0 +1,205 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>艺美舞蹈培训中心招生啦！</title>
+    <meta name="Keywords" content="微网站、舞蹈、培训、青少年、少儿、跆拳道、保定">
+    <meta name="Description" content="艺美舞蹈培训中心招生简介，培训青少年舞蹈、跆拳道">
+
+    <!-- 移动设备支持 -->
+    <meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+    <meta content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"
+          name="viewport">
+    <meta content="no-cache,must-revalidate" http-equiv="Cache-Control">
+    <meta content="no-cache" http-equiv="pragma">
+    <meta content="0" http-equiv="expires">
+    <meta content="telephone=no, address=no" name="format-detection">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+    <link href="css/reset.css" rel="stylesheet" type="text/css">
+    <link href="css/mod32.css" rel="stylesheet" type="text/css">
+    <script type="text/javascript" src="js/jquery-1.10.2.min.js"></script>
+    <script>
+        $(function () {
+            var winheight = $(window).height();
+            $('#wrap').css('min-height', winheight - 30 + 'px');//footer居底
+            $('.blankwhite').css('height', '0px');
+            var winwidth = $(window).width();
+            $('.contentimgcl').css('height', winwidth * 0.95 * 0.283 + 'px');
+        });
+    </script>
+</head>
+
+<body>
+<div id="wrap" class="clr">
+    <div class="banner">
+        <div style="width:100%;align:center;margin:0 auto;" id="imageswzi">
+            <style>
+                .box_swipe {
+                    overflow: hidden;
+                    position: relative;
+                }
+
+                .box_swipe ul {
+                    -webkit-padding-start: 0px;
+                }
+
+                .box_swipe > ol {
+                    height: 20px;
+                    position: relative;
+                    z-index: 10;
+                    margin-top: -25px;
+                    text-align: right;
+                    padding-right: 15px;
+                }
+
+                /* background-color:rgba(0,0,0,0.3); */
+                .box_swipe > ol > li {
+                    display: inline-block;
+                    margin: 5px 0;
+                    width: 8px;
+                    height: 8px;
+                    background-color: #757575;
+                    border-radius: 8px;
+                }
+
+                .box_swipe > ol > li.on {
+                    background-color: #ffffff;
+                }
+
+
+            </style>
+            <script src="js/swipe2.js" type="text/javascript"></script>
+            <div id="displayswipe" style="-webkit-transform:translate3d(0,0,0);" style="display:none;">
+                <div style="visibility: visible;" id="banner_box" class="box_swipe">
+                    <ul style="list-style: none outside none; width: 4480px; transition-duration: 500ms; transform: translate3d(-1920px, 0px, 0px);">
+                        <li style="width: 640px; display: table-cell; vertical-align: top;">
+                            <a href="./introduce.html">
+                                <img src="./img/student/11.jpg" id="bannerimg4915" style="width:100%;">
+                            </a>
+                        </li>
+                    </ul>
+                    <ol>
+                        <li class=""></li>
+                        &nbsp;
+
+                    </ol>
+                </div>
+            </div>
+
+            <div id="displayone" style="display:none;">
+                <a href="./introduce.html">
+                    <img src="./img/student/11.jpg" style="width:100%;">
+                </a>
+            </div>
+            <script>
+                $(function () {
+                    $("#displayswipe").show();
+                    $("#displayone").hide();
+                    //var banner=Array;//banner列表记录
+
+                    if (1 == 1) {
+                        $("#displayswipe").hide();
+                        $("#displayone").show();
+                    }
+
+
+                    new Swipe(document.getElementById('banner_box'), {
+                        speed: 500,
+                        auto: 3000,
+                        callback: function () {
+                            var lis = $(this.element).next("ol").children();
+                            lis.removeClass("on").eq(this.index).addClass("on");
+                        }
+                    });
+                });
+            </script>
+        </div>
+    </div>
+    <div class="cont-box clr">
+        <a href="./student.html">
+            <div class="picTab">
+                <img src="./img/student/17.jpg" class='contentimgcl'
+                     width='100%'/>
+                <p>学院教学</p>
+            </div>
+        </a>
+        <a href="./show.html">
+            <div class="picTab">
+                <img src="./img/show/32.JPG" class='contentimgcl'
+                     width='100%'/>
+                <p>学员风采</p>
+            </div>
+        </a>
+
+    </div>
+    <div class="cont-box clr">
+        <a href="./teacher.html">
+            <div class="picTab">
+                <img src="./img/teacher/11.JPG" class='contentimgcl'
+                     width='100%'/>
+                <p>师资力量</p>
+            </div>
+        </a>
+        <a href="./achievement.html">
+            <div class="picTab">
+                <img src="./img/achievement/9.JPG" class='contentimgcl'
+                     width='100%'/>
+                <p>奖励荣耀</p>
+            </div>
+        </a>
+    </div>
+
+</div>
+<script type="text/javascript" src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+<script type="text/javascript" src="http://static.dodoca.com/js/wxsharejs.js?v=1.4"></script>
+<script type="text/javascript" src="http://static.dodoca.com/js/jquery-1.10.2.min.js"></script>
+<!-- <script type="text/javascript" src="/www/js/wxsharejs.js"></script> -->
+<script type="text/javascript">
+
+    var tongjitype = $.trim();
+    var uid = $.trim(6918);
+    function tongji(id, type) {
+        $.ajax({
+            url: "/6918/phonewebsite/tongji",
+            type: "post",
+            async: false,
+            data: {'id': id, 'type': type, 'tongjitype': tongjitype, 'uid': uid}
+        })
+    }
+    var fx_describefenxiang = "";
+    wx_share_out('艺美舞蹈培训', '', fx_describefenxiang);
+</script>
+
+
+<div class="blankwhite" style="height:30px;"></div>
+
+<script>
+
+    $(function () {
+        if (typeof WeixinJSBridge == "undefined") {
+            if (document.addEventListener) {
+                document.addEventListener('WeixinJSBridgeReady', onBridgeReady, false);
+            } else if (document.attachEvent) {
+                document.attachEvent('WeixinJSBridgeReady', onBridgeReady);
+                document.attachEvent('onWeixinJSBridgeReady', onBridgeReady);
+            }
+        } else {
+            onBridgeReady();
+        }
+
+        var shareTitle = '艺美舞蹈培训';
+        var imgUrl = "";
+        var descContent = $("#div_fx_describe").text();
+        var urllink = "www.dodoca.com/6918/phonewebsite/website?id=19392#mp.weixin.qq.com";
+        wx_share_out('6918', shareTitle, imgUrl, descContent, urllink);
+    });
+
+    function onBridgeReady() {
+        WeixinJSBridge.call('showOptionMenu');
+    }
+</script>
+<div id="div_fx_describe" style="display:none;"></div>
+</body>
+</html>

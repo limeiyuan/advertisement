@@ -1,0 +1,96 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>艺美舞蹈培训中心招生啦！</title>
+    <meta name="Keywords" content="微网站、舞蹈、培训、青少年、少儿、跆拳道、保定">
+    <meta name="Description" content="艺美舞蹈培训中心招生简介，培训青少年舞蹈、跆拳道">
+
+    <!-- 移动设备支持 -->
+    <meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+    <meta content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"
+          name="viewport">
+    <meta content="no-cache,must-revalidate" http-equiv="Cache-Control">
+    <meta content="no-cache" http-equiv="pragma">
+    <meta content="0" http-equiv="expires">
+    <meta content="telephone=no, address=no" name="format-detection">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+    <link href="css/reset.css" rel="stylesheet" type="text/css">
+    <link href="css/mod32.css" rel="stylesheet" type="text/css">
+    <script type="text/javascript" src="js/jquery-1.10.2.min.js"></script>
+    <script>
+        $(function () {
+            var winheight = $(window).height();
+            $('#wrap').css('min-height', winheight - 30 + 'px');//footer居底
+            $('.blankwhite').css('height', '0px');
+            var winwidth = $(window).width();
+            $('.contentimgcl').css('height', winwidth * 0.95 * 0.283 + 'px');
+        });
+    </script>
+</head>
+
+<body>
+<iframe src="./main.html" style="width:99%;height: 94%;"></iframe>
+<script type="text/javascript" src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+<script type="text/javascript" src="http://static.dodoca.com/js/wxsharejs.js?v=1.4"></script>
+<script type="text/javascript" src="http://static.dodoca.com/js/jquery-1.10.2.min.js"></script>
+<!-- <script type="text/javascript" src="/www/js/wxsharejs.js"></script> -->
+<a href="tel:13703363022">
+    <footer>招生电话：
+        13703363022
+        15930255200
+    </footer>
+</a>
+
+
+<div class="blankwhite" style="height:30px;"></div>
+
+<script>
+
+    $(function () {
+        if (typeof WeixinJSBridge == "undefined") {
+            if (document.addEventListener) {
+                document.addEventListener('WeixinJSBridgeReady', onBridgeReady, false);
+            } else if (document.attachEvent) {
+                document.attachEvent('WeixinJSBridgeReady', onBridgeReady);
+                document.attachEvent('onWeixinJSBridgeReady', onBridgeReady);
+            }
+        } else {
+            onBridgeReady();
+        }
+
+        var shareTitle = '艺美舞蹈培训';
+        var imgUrl = "";
+        var descContent = $("#div_fx_describe").text();
+        var urllink = "www.dodoca.com/6918/phonewebsite/website?id=19392#mp.weixin.qq.com";
+        wx_share_out('6918', shareTitle, imgUrl, descContent, urllink);
+    });
+
+    function onBridgeReady() {
+        WeixinJSBridge.call('showOptionMenu');
+    }
+</script>
+<div id="div_fx_describe" style="display:none;"></div>
+<audio id="bgmusic" src="./mp3/0.mp3" autoplay preload loop></audio>
+<script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+<script>
+    // 通过config接口注入权限验证配置后, 在 ready 中 play 一下 audio
+    function autoPlayAudio1() {
+        wx.config({
+            // 配置信息, 即使不正确也能使用 wx.ready
+            debug: false,
+            appId: '',
+            timestamp: 1,
+            nonceStr: '',
+            signature: '',
+            jsApiList: []
+        });
+        wx.ready(function () {
+            document.getElementById('bgmusic').play();
+        });
+    }
+</script>
+</body>
+</html>
